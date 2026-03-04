@@ -1,0 +1,10 @@
+venv
+requirements-lock.txt
+__pycache__/
+*.pyc
+weights/
+logs/
+results/
+
+
+.env

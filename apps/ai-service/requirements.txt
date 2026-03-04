@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-multipart
+pydantic
+python-dotenv
+supabase
+numpy
+opencv-python
+deepface
+tensorflow
+pillow
+ultralytics
+requests
+omegaconf
+resend
