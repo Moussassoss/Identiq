@@ -29,20 +29,35 @@ export default function DashboardPage() {
 
       // get org for current user
       const userId = data.session.user.id;
-      const org = await supabase
+      const orgRes = await supabase
         .from("organizations")
-        .select("id")
+        .select("id,name,created_at")
         .eq("owner_user_id", userId)
-        .limit(1)
-        .single();
+        .order("created_at", { ascending: true })
+        .limit(1);
 
-      if (org.error) return setErr(org.error.message);
-      setOrgId(org.data.id);
+      if (orgRes.error) return setErr(orgRes.error.message);
+
+      let org = orgRes.data?.[0];
+
+      // If no org exists, create one automatically
+      if (!org) {
+        const createOrg = await supabase
+          .from("organizations")
+          .insert({ owner_user_id: userId, name: "My Organization" })
+          .select("id,name,created_at")
+          .single();
+
+        if (createOrg.error) return setErr(createOrg.error.message);
+        org = createOrg.data;
+      }
+
+      setOrgId(org.id);
 
       const ev = await supabase
         .from("events")
         .select("id,title,event_date,location,status")
-        .eq("organization_id", org.data.id)
+        .eq("organization_id", org.id)
         .order("created_at", { ascending: false });
 
       if (ev.error) return setErr(ev.error.message);

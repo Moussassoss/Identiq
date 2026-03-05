@@ -25,7 +25,7 @@ export default function LoginPage() {
 
   return (
     <div className="flex items-center justify-center min-h-screen p-6">
-      <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8">
+      <div className="w-full max-w-md shadow-xl rounded-2xl p-8">
 
         <h1 className="text-2xl font-bold text-center">
           Identiq

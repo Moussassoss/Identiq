@@ -93,7 +93,6 @@ export default function AttendeeEnrollPage() {
             <input
               type="file"
               accept="image/*"
-              capture="user"
               className="mt-3 block w-full text-sm text-gray-700 cursor-pointer"
               onChange={(e) => setFile(e.target.files?.[0] ?? null)}
             />

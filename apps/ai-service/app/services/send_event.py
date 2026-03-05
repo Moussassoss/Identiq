@@ -67,7 +67,7 @@ async def send_event(event_id: str):
         """
 
         resend.Emails.send({
-            "from": "Identiq <onboarding@resend.dev>",
+            "from": "Identiq <cleanex@chadnova.com>",
             "to": [a["email"]],
             "subject": subject,
             "html": html

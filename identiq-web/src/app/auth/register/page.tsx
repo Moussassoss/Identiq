@@ -50,7 +50,7 @@ export default function RegisterPage() {
 
   return (
     <div className="flex items-center justify-center min-h-screen p-6">
-      <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8">
+      <div className="w-full max-w-md shadow-xl rounded-2xl p-8">
         <h1 className="text-2xl font-bold text-center">Identiq</h1>
         <p className="text-center text-gray-500 mt-2">
           Create your organizer account
@@ -98,7 +98,7 @@ export default function RegisterPage() {
 
           <button
             onClick={() => router.push("/auth/login")}
-            className="w-full border border-gray-300 py-3 rounded-lg hover:bg-gray-100 transition cursor-pointer"
+            className="w-full border border-gray-300 py-3 rounded-lg hover:bg-gray-800 transition cursor-pointer"
           >
             Back to login
           </button>
