@@ -65,7 +65,7 @@ export default function LoginPage() {
 
           <button
             onClick={() => router.push("/auth/register")}
-            className="w-full border border-gray-300 py-3 rounded-lg hover:bg-gray-100 transition cursor-pointer"
+            className="w-full border border-gray-300 py-3 rounded-lg hover:bg-gray-800 transition cursor-pointer"
           >
             Create account
           </button>

@@ -224,7 +224,7 @@ export default function EventDetailsPage() {
             await supabase.auth.signOut();
             router.push("/auth/login");
           }}
-          className="border px-4 py-2 rounded-lg hover:bg-gray-100 cursor-pointer transition"
+          className="border px-4 py-2 rounded-lg hover:bg-gray-800 cursor-pointer transition"
         >
           Logout
         </button>
@@ -242,7 +242,7 @@ export default function EventDetailsPage() {
 
       <div className="mt-6 grid lg:grid-cols-3 gap-6">
         {/* QR */}
-        <div className="bg-white rounded-2xl shadow p-5 lg:col-span-1">
+        <div className="bg-white rounded-2xl text-black shadow p-5 lg:col-span-1">
           <h2 className="font-semibold">Attendee QR</h2>
           <p className="text-sm text-gray-600 mt-1">
             Attendees scan to enroll (name/email + selfie).
@@ -269,7 +269,7 @@ export default function EventDetailsPage() {
         </div>
 
         {/* Upload */}
-        <div className="bg-white rounded-2xl shadow p-5 lg:col-span-1">
+        <div className="bg-white rounded-2xl text-black shadow p-5 lg:col-span-1">
           <h2 className="font-semibold">Upload photos</h2>
           <p className="text-sm text-gray-600 mt-1">
             Upload event photos here. They will be stored in Supabase Storage.
@@ -295,7 +295,7 @@ export default function EventDetailsPage() {
         </div>
 
         {/* Actions */}
-        <div className="bg-white rounded-2xl shadow p-5 lg:col-span-1">
+        <div className="bg-white rounded-2xl text-black shadow p-5 lg:col-span-1">
           <h2 className="font-semibold">AI actions</h2>
           <p className="text-sm text-gray-600 mt-1">
             After uploading, process photos and send emails.
@@ -342,7 +342,7 @@ export default function EventDetailsPage() {
       </div>
 
       {/* Attendees list */}
-      <div className="mt-6 bg-white rounded-2xl shadow p-5">
+      <div className="mt-6 bg-white rounded-2xl text-black shadow p-5">
         <div className="flex items-center justify-between">
           <h2 className="font-semibold">Attendees</h2>
           <button

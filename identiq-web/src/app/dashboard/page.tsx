@@ -93,7 +93,7 @@ export default function DashboardPage() {
             await supabase.auth.signOut();
             router.push("/auth/login");
           }}
-          className="border px-4 py-2 rounded-lg hover:bg-gray-100 cursor-pointer transition"
+          className="border px-4 py-2 rounded-lg hover:bg-gray-800 cursor-pointer transition"
         >
           Logout
         </button>
@@ -104,36 +104,36 @@ export default function DashboardPage() {
 
       <div className="mt-6 grid md:grid-cols-2 gap-6">
         <div className="bg-white rounded-2xl shadow p-5">
-          <h2 className="font-semibold">Create event</h2>
+          <h2 className="font-semiboldn text-zinc-950">Create event</h2>
           <div className="mt-3 space-y-3">
-            <input className="w-full border rounded-xl p-3" placeholder="Event title" value={title}
+            <input className="w-full border rounded-xl p-3 text-zinc-950" placeholder="Event title" value={title}
                    onChange={(e) => setTitle(e.target.value)} />
-            <input className="w-full border rounded-xl p-3" type="date" value={date}
+            <input className="w-full border rounded-xl p-3 text-zinc-950" type="date" value={date}
                    onChange={(e) => setDate(e.target.value)} />
-            <input className="w-full border rounded-xl p-3" placeholder="Location" value={location}
+            <input className="w-full border rounded-xl p-3 text-zinc-950" placeholder="Location" value={location}
                    onChange={(e) => setLocation(e.target.value)} />
-            <button onClick={createEvent} className="w-full rounded-xl bg-black text-white p-3">
+            <button onClick={createEvent} className="w-full rounded-xl bg-black text-white p-3 hover:bg-gray-800">
               Create
             </button>
           </div>
         </div>
 
         <div className="bg-white rounded-2xl shadow p-5">
-          <h2 className="font-semibold">Your events</h2>
-          <div className="mt-3 space-y-2">
+          <h2 className="font-semibold text-zinc-950">Your events</h2>
+          <div className="mt-3 space-y-2 text-black">
             {events.map((e) => (
               <button
                 key={e.id}
                 onClick={() => router.push(`/dashboard/events/${e.id}`)}
-                className="w-full text-left border rounded-xl p-3 hover:bg-gray-50"
+                className="w-full text-left border rounded-xl p-3 hover:bg-gray-500"
               >
                 <div className="font-medium">{e.title}</div>
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-zinc-950">
                   {e.event_date ?? "No date"} • {e.location ?? "No location"} • {e.status}
                 </div>
               </button>
             ))}
-            {events.length === 0 && <p className="text-sm text-gray-600">No events yet.</p>}
+            {events.length === 0 && <p className="text-sm text-zinc-950">No events yet.</p>}
           </div>
         </div>
       </div>
