@@ -6,6 +6,8 @@ import { AI_BASE_URL } from "@/lib/api";
 
 export default function GalleryPage() {
   const params = useParams();
+  
+  // Extract the token from the route params (used to fetch gallery photos)
   const token = (params?.token as string) || "";
 
   const [photos, setPhotos] = useState<string[]>([]);
@@ -13,6 +15,7 @@ export default function GalleryPage() {
   const [err, setErr] = useState<string | null>(null);
 
   useEffect(() => {
+     // Immediately invoked async function to fetch gallery data
     (async () => {
       if (!token) return;
 
