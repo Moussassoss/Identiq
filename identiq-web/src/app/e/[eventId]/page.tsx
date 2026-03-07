@@ -64,27 +64,27 @@ export default function AttendeeEnrollPage() {
   return (
     <div className="min-h-screen flex items-center justify-center p-6">
       <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8">
-        <h1 className="text-2xl font-bold text-center">Identiq</h1>
+        <h1 className="text-2xl font-bold text-zinc-950 text-center">Identiq</h1>
         <p className="text-center text-gray-500 mt-2">
           Register your face to receive your event photos
         </p>
 
         <div className="mt-6 space-y-4">
           <input
-            className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full border text-black border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
             placeholder="Full name"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
           />
 
           <input
-            className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full border text-black border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-black"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <div className="border border-gray-300 rounded-lg p-3">
+          <div className="border text-black border-gray-300 rounded-lg p-3">
             <p className="text-sm font-medium">Selfie (required)</p>
             <p className="text-xs text-gray-500 mt-1">
               Take a clear selfie facing the camera.
